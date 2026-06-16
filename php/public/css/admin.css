@@ -1,0 +1,13 @@
+/* 
+   Punto de entrada: importa todos los módulos en orden.
+*/
+
+@import url('modules/admin/_base.css');
+@import url('modules/admin/_sidebar.css');
+@import url('modules/admin/_layout.css');
+@import url('modules/admin/_kpis.css');
+@import url('modules/admin/_table.css');
+@import url('modules/admin/_actions.css');
+@import url('modules/admin/_footer.css');
+@import url('modules/admin/_utils.css');
+@import url('modules/admin/_responsive.css');

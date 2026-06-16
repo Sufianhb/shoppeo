@@ -1,0 +1,83 @@
+/* shoppeo admin — page header & KPI cards */
+
+/* ════════════════════════════════════════
+   PAGE HEADER
+   ════════════════════════════════════════ */
+.ad-page-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #1a1a2e;
+    margin: 0 0 4px;
+    letter-spacing: -0.5px;
+}
+
+.ad-page-sub {
+    font-size: 14px;
+    color: #9ca3af;
+    margin: 0 0 28px;
+    font-weight: 400;
+}
+
+/* ════════════════════════════════════════
+   KPI CARDS
+   ════════════════════════════════════════ */
+.ad-kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 28px;
+}
+
+.ad-kpi-card {
+    background: white;
+    border-radius: 18px;
+    padding: 22px 22px 18px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.ad-kpi-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 14px;
+}
+
+.ad-kpi-icon {
+    width: 54px;
+    height: 54px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 23px;
+    flex-shrink: 0;
+}
+
+.ad-kpi-icon-purple { background: #ede9fe; color: #7c3aed; }
+.ad-kpi-icon-green  { background: #dcfce7; color: #22c55e; }
+.ad-kpi-icon-amber  { background: #fef3c7; color: #f59e0b; }
+.ad-kpi-icon-blue   { background: #dbeafe; color: #3b82f6; }
+
+.ad-kpi-val {
+    font-size: 34px;
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.ad-kpi-label {
+    font-size: 13px;
+    color: #9ca3af;
+    font-weight: 400;
+    margin-top: 3px;
+}
+
+.ad-kpi-trend {
+    font-size: 12.5px;
+    color: #7c3aed;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}

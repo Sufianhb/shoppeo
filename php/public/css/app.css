@@ -1,0 +1,16 @@
+/* 
+   Punto de entrada: importa todos los módulos en orden.
+*/
+
+@import url('modules/_variables.css');
+@import url('modules/_navbar.css');
+@import url('modules/_home.css');
+@import url('modules/_auth.css');
+@import url('modules/_mapa.css');
+@import url('modules/_producto.css');
+@import url('modules/_busqueda.css');
+@import url('modules/_wizard.css');
+@import url('modules/_footer.css');
+@import url('modules/_ayuda.css');
+@import url('modules/_puntos.css');
+@import url('modules/_descuentos.css');

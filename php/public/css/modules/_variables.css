@@ -1,0 +1,37 @@
+/* shoppeo — variables & base */
+
+html { scroll-behavior: smooth; }
+
+/* ═══════════════════ VARIABLES ═══════════════════ */
+:root {
+    /* ── Purple brand scale ── */
+    --sp-purple:   #7c3aed;   /* primary */
+    --sp-purple2:  #6d28d9;   /* dark */
+    --sp-purple3:  #5b21b6;   /* darkest */
+    --sp-purple-l: #ede9fe;   /* light tint */
+    --sp-purple-m: #ddd6fe;   /* medium tint */
+
+    /* ── Semantic accents ── */
+    --sp-green:   #16a34a;
+    --sp-amber:   #f59e0b;
+    --sp-blue:    #2563eb;
+    --sp-pink:    #db2777;
+    --sp-red:     #dc2626;
+
+    /* ── Neutrals ── */
+    --sp-dark:    #111827;   /* gray-900 */
+    --sp-gray:    #6b7280;   /* gray-500 */
+    --sp-gray-l:  #f3f4f6;   /* gray-100 */
+    --sp-border:  #e5e7eb;   /* gray-200 */
+
+    /* ── Effects ── */
+    --sp-shadow:  0 8px 24px rgba(0,0,0,0.08);
+    --sp-shadow2: 0 4px 12px rgba(124,58,237,0.15);
+
+    /* ── Legacy aliases (kept for backward compat) ── */
+    --tm-primary:   #7c3aed;
+    --tm-accent:    #f59e0b;
+    --tm-success:   #16a34a;
+    --tm-hero-from: #7c3aed;
+    --tm-hero-to:   #6d28d9;
+}

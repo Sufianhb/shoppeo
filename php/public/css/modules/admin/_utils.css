@@ -1,0 +1,62 @@
+/* shoppeo admin — utilidades de marca, overlay */
+
+/* ════════════════════════════════════════
+   BRAND BUTTON UTILITIES  (CRUD pages)
+   ════════════════════════════════════════ */
+
+.btn-purple {
+    background: linear-gradient(90deg, #7c3aed 0%, #6d28d9 100%);
+    border: none;
+    color: #fff !important;
+    box-shadow: 0 3px 12px rgba(124,58,237,.28);
+    transition: opacity .2s, box-shadow .2s;
+}
+
+.btn-purple:hover, .btn-purple:focus {
+    opacity: .91;
+    color: #fff !important;
+    box-shadow: 0 5px 18px rgba(124,58,237,.42);
+}
+
+.btn-outline-purple {
+    color: #7c3aed;
+    border-color: #7c3aed;
+    background: transparent;
+    transition: background .15s, color .15s;
+}
+
+.btn-outline-purple:hover, .btn-outline-purple:focus {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    color: #fff;
+}
+
+.text-purple { color: #7c3aed !important; }
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #7c3aed !important;
+    box-shadow: 0 0 0 3px rgba(124,58,237,.12) !important;
+}
+
+.table > thead.thead-purple th {
+    background: #f5f3ff;
+    color: #5b21b6;
+    border-bottom-color: #ddd6fe;
+}
+
+/* ════════════════════════════════════════
+   OVERLAY (mobile sidebar backdrop)
+   ════════════════════════════════════════ */
+.ad-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.50);
+    z-index: 1049;
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
+}
+
+.ad-overlay.visible { display: block; }

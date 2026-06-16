@@ -1,0 +1,86 @@
+version: '3.9'
+
+services:
+
+  #  PostgreSQL 
+  db:
+    image: postgres:16-alpine
+    container_name: shoppeo_db
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: shoppeo
+      POSTGRES_USER: tmuser
+      POSTGRES_PASSWORD: tmpassword
+    volumes:
+      - db_data:/var/lib/postgresql/data
+      - ./database:/docker-entrypoint-initdb.d
+    networks:
+      - shoppeo_net
+    ports:
+      - "5432:5432"
+
+  #  PHP + Apache 
+  php:
+    build:
+      context: ./docker/php
+      dockerfile: Dockerfile
+    container_name: shoppeo_php
+    restart: unless-stopped
+    volumes:
+      - ./php:/var/www/html
+    environment:
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: shoppeo
+      DB_USER: tmuser
+      DB_PASS: tmpassword
+      APP_ENV: development
+      APP_SECRET: s3cr3t_k3y_tfg_2024
+      REDIS_HOST: redis
+      REDIS_PORT: 6379
+    depends_on:
+      - db
+      - redis
+    networks:
+      - shoppeo_net
+    ports:
+      - "8080:80"
+
+  #  Redis 
+  redis:
+    image: redis:7-alpine
+    container_name: shoppeo_redis
+    restart: unless-stopped
+    networks:
+      - shoppeo_net
+
+  #  Node.js WebSocket Server 
+  websocket:
+    build:
+      context: ./node-ws
+      dockerfile: Dockerfile
+    container_name: shoppeo_ws
+    restart: unless-stopped
+    environment:
+      WS_PORT: 3000
+      PHP_API_URL: http://php/api/ws-notify
+      SIMULATE: "true"
+      DB_HOST: db
+      DB_PORT: 5432
+      DB_NAME: shoppeo
+      DB_USER: tmuser
+      DB_PASS: tmpassword
+    depends_on:
+      - db
+      - php
+    networks:
+      - shoppeo_net
+    ports:
+      - "3000:3000"
+
+volumes:
+  db_data:
+
+networks:
+  shoppeo_net:
+    driver: bridge

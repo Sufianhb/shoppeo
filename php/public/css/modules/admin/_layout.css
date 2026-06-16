@@ -1,0 +1,122 @@
+/* shoppeo admin — main area, topbar, content */
+
+/* ════════════════════════════════════════
+   MAIN AREA
+   ════════════════════════════════════════ */
+.ad-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: #f5f3ff;
+    min-width: 0;
+}
+
+/* Topbar */
+.ad-topbar {
+    height: 70px;
+    min-height: 70px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 28px;
+    box-shadow: 0 1px 0 #ede9fe, 0 2px 12px rgba(0, 0, 0, 0.04);
+    z-index: 20;
+    flex-shrink: 0;
+}
+
+.ad-topbar-left {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.ad-hamburger {
+    width: 34px;
+    height: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #9ca3af;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: background 0.15s;
+}
+
+.ad-hamburger:hover { background: #f3f4f6; }
+
+.ad-topbar-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #1a1a2e;
+}
+
+.ad-topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.ad-badge-rt {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 7px 14px;
+    background: #dcfce7;
+    color: #16a34a;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.ad-badge-rt-dot {
+    width: 7px;
+    height: 7px;
+    background: #16a34a;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.ad-btn-verweb {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 16px;
+    background: white;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: #374151;
+    cursor: pointer;
+    text-decoration: none;
+    transition: border-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.ad-btn-verweb:hover {
+    border-color: #7c3aed;
+    color: #7c3aed;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.12);
+}
+
+/* Content scroll area */
+.ad-content-scroll {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.ad-content-scroll::-webkit-scrollbar { width: 6px; }
+.ad-content-scroll::-webkit-scrollbar-track { background: #f5f3ff; }
+.ad-content-scroll::-webkit-scrollbar-thumb { background: #ddd6fe; border-radius: 4px; }
+
+.ad-content {
+    padding: 28px 28px 36px;
+}
+
+.ad-flash {
+    padding: 16px 28px 0;
+}

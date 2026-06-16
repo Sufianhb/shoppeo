@@ -1,0 +1,182 @@
+/* shoppeo — footer (ft-*) */
+
+/* ═══════════════════════════════════════════
+   FOOTER  (ft-*)
+   ═══════════════════════════════════════════ */
+
+.ft-footer {
+    background: #0f172a;
+    border-top: 3px solid #7c3aed;
+}
+
+.ft-top {
+    padding: 60px 0 48px;
+}
+
+.ft-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+}
+
+/* ── Columna marca ── */
+.ft-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    margin-bottom: 16px;
+}
+
+.ft-logo img {
+    height: 34px;
+    filter: brightness(0) invert(1);
+}
+
+.ft-logo-text {
+    font-size: 22px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: -0.3px;
+}
+
+.ft-logo-plus { color: #c4b5fd; }
+
+.ft-brand-desc {
+    font-size: 14px;
+    color: #94a3b8;
+    line-height: 1.7;
+    margin-bottom: 22px;
+    max-width: 280px;
+}
+
+.ft-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.ft-social {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
+}
+
+.ft-social:hover {
+    background: #7c3aed;
+    border-color: #7c3aed;
+    color: #fff;
+}
+
+/* ── Columnas de enlaces ── */
+.ft-col-title {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0 0 18px;
+}
+
+.ft-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+}
+
+.ft-link {
+    font-size: 14px;
+    color: #94a3b8;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    transition: color 0.18s;
+}
+
+.ft-link i { font-size: 13px; opacity: 0.65; }
+
+.ft-link:hover { color: #c4b5fd; }
+
+/* ── Estado del sistema ── */
+.ft-status {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    margin-bottom: 18px;
+}
+
+.ft-status-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #94a3b8;
+}
+
+.ft-status-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: #22c55e;
+    box-shadow: 0 0 6px rgba(34,197,94,0.55);
+}
+
+.ft-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.ft-badge {
+    padding: 3px 10px;
+    background: rgba(124,58,237,0.15);
+    border: 1px solid rgba(124,58,237,0.28);
+    border-radius: 999px;
+    font-size: 11.5px;
+    color: #c4b5fd;
+    font-weight: 600;
+}
+
+/* ── Barra inferior ── */
+.ft-bottom {
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding: 18px 0;
+}
+
+.ft-bottom-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 13px;
+    color: #475569;
+}
+
+.ft-bottom-right {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* ── Responsive ── */
+@media (max-width: 991px) {
+    .ft-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+
+@media (max-width: 575px) {
+    .ft-grid { grid-template-columns: 1fr; gap: 28px; }
+    .ft-top { padding: 40px 0 32px; }
+    .ft-bottom-inner { flex-direction: column; gap: 8px; text-align: center; }
+}

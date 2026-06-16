@@ -1,0 +1,31 @@
+/* shoppeo admin — variables & base */
+
+:root {
+    --sp-purple:   #7c3aed;
+    --sp-purple2:  #6d28d9;
+    --sp-purple3:  #5b21b6;
+    --sp-purple-l: #ede9fe;
+    --sp-purple-m: #ddd6fe;
+    --sp-green:    #16a34a;
+    --sp-amber:    #f59e0b;
+    --sp-red:      #dc2626;
+    --sp-dark:     #111827;
+    --sp-gray:     #6b7280;
+    --sp-gray-l:   #f3f4f6;
+    --sp-border:   #e5e7eb;
+    --sp-shadow:   0 8px 24px rgba(0,0,0,0.08);
+    --sp-shadow2:  0 4px 12px rgba(124,58,237,0.15);
+}
+
+html, body.ad-body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.ad-wrapper {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}

@@ -1,0 +1,30 @@
+/* shoppeo admin — footer */
+
+/* ════════════════════════════════════════
+   FOOTER
+   ════════════════════════════════════════ */
+.ad-footer {
+    padding: 20px 28px;
+    border-top: 1px solid #f3f4f6;
+    font-size: 12px;
+    color: #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: white;
+}
+
+.ad-footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+.ad-footer-links a {
+    color: #9ca3af;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.ad-footer-links a:hover { color: #7c3aed; }
